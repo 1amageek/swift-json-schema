@@ -37,14 +37,14 @@ public final class JSONSchema: Codable, Sendable {
     /// An optional description providing additional information about the schema.
     public let description: String?
     
-    let arraySchema: ArraySchema?
-    let booleanSchema: BooleanSchema?
-    let enumSchema: EnumSchema?
-    let integerSchema: IntegerSchema?
-    let nullSchema: NullSchema?
-    let numberSchema: NumberSchema?
-    let objectSchema: ObjectSchema?
-    let stringSchema: StringSchema?
+    public let arraySchema: ArraySchema?
+    public let booleanSchema: BooleanSchema?
+    public let enumSchema: EnumSchema?
+    public let integerSchema: IntegerSchema?
+    public let nullSchema: NullSchema?
+    public let numberSchema: NumberSchema?
+    public let objectSchema: ObjectSchema?
+    public let stringSchema: StringSchema?
     
     init(
         type: SchemaType,
