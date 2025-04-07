@@ -167,9 +167,8 @@ public final class JSONSchema: Codable, Sendable {
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         
-        if type != .enum {
-            try container.encode(type, forKey: .type)
-        }
+        // Always encode the type, including for enum
+        try container.encode(type, forKey: .type)
         
         try container.encodeIfPresent(description, forKey: .description)
         
